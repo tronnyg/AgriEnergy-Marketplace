@@ -13,6 +13,26 @@ namespace AgriEnergy_WebApp.Controllers
             return View();
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(string username, string password)
+        {
+            if (username == "admin" && password == "password") 
+            {
+
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "Invalid username or password";
+                return View();
+            }
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

@@ -1,0 +1,21 @@
+﻿.input-field {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 24px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1.5px solid #4caf50;
+    width: 394.5px;
+    margin-top: -1.5px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #828282;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 36px;
+}
+
+.input-field:focus {
+    border-color: #2196F3;
+}

@@ -1,0 +1,219 @@
+﻿@import url('Components/vectors.css');
+@import url('Components/input-fields.css');
+@import url('Components/buttons.css');
+@import url('Components/navbar.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.login .input-field.username {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.login .input-field.password {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+}
+
+.login .button {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    width: 450px;
+    height: 60px;
+}
+
+.login .button .text-wrapper {
+    font-size: 20px;
+}
+
+.login .label.login {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    color: #000;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    letter-spacing: 0;
+    font-weight: 600;
+    line-height: normal;
+}
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    background-color: white;
+    padding-top: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+
+}
+nav ul{
+    padding-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    text-align: right;
+    width: 75%;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+nav ul li a {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    border-radius: 6.87px;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+    transition: .3s;
+}
+
+nav ul li a:active,
+nav ul li a:focus
+{
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color .3s, color .3s;
+}
+
+nav .label {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.user-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    cursor: pointer;
+    margin-left: 0px;
+    border: 2px solid #000;
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.8s;
+}
+
+    .sub-menu-wrap.open-menu {
+        max-height: 400px;
+    }
+
+.sub-menu {
+    background: white;
+    border: 2px solid #000;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info h3 {
+    font-weight: 500;
+}
+
+.user-info img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin: 12px 0;
+}
+
+.sub-menu-link p{
+    width: 100%;
+}
+
+.sub-menu-link span{
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span{
+    transform: translateX(5px);
+    color: black;
+}
+
+.sub-menu-link:hover p{
+    font-weight: 600;
+    color: black;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+
+/*.page-body {
+    background-color: antiquewhite;
+}*/
+
+.shop-header {
+    background-image: url('https://images.unsplash.com/photo-1508928807352-24a4adbb6795?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-content:center;
+    max-width: 99%;
+}
+
+.parent-element {
+    overflow-x: hidden;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Hide the scrollbar while still allowing scrolling */
+::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+html {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
