@@ -1,0 +1,40 @@
+﻿<nav>
+    <div class="label">
+        <label>
+            AGRI-ENERGY CONNECT
+        </label>
+    </div>
+    <ul>
+        <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+        <li><a href="@Url.Action("About", "Home")">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+    </ul>
+    <img class="user-pic" src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/corporate-user-icon.png" onclick="toggleMenu()" />
+
+    <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+            <div class="user-info">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/corporate-user-icon.png"/>
+                <h3>James Aldrino</h3>
+            </div>
+            <hr />
+            <a href="#" class="sub-menu-link">
+                <p>Edit Profile</p>
+                <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <p>Logout</p>
+                <span>></span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu() {
+        subMenu.classList.toggle("open-menu");
+    }
+</script>
