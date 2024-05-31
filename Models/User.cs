@@ -31,6 +31,8 @@ namespace AgriEnergy_WebApp.Models
         [StringLength(255)]
         public string Surname { get; set; }
 
+        public string UserProfilePicture {  get; set; }
+
         [Required]
         [StringLength(50)]
         public string Role { get; set; }

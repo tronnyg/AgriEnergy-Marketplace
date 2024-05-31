@@ -1,0 +1,124 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container.store-container {
+    max-width: 100%;
+    padding-top: 1%;
+    display: flex;
+    justify-content: center;
+    gap: 27%;
+    background-color: #FAFAFA;
+    border-radius: 8px;
+}
+
+.container.product-list {
+    margin: 0 auto 0 auto;
+    justify-content: center;
+    padding: 0px;
+}
+.store-details {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.store-info, .owner-info {
+    display: flex;
+    align-items: center;
+}
+
+.store-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 3%;
+    margin-right: 20px;
+    border: solid 2px #D0D0D0;
+}
+
+.owner-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: solid 2px #D0D0D0;
+}
+
+.store-text {
+    text-align: left;
+}
+
+.store-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.store-description {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.store-location, .store-sales {
+    margin: 3px 0;
+    color: #555;
+}
+
+.store-rating span {
+    color: gold;
+    font-size: 1.2rem;
+}
+
+.owner-text {
+    text-align: center;
+}
+
+.owner-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.contact-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
+.shop-header {
+    background-image: url('https://images.unsplash.com/photo-1508928807352-24a4adbb6795?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-content: center;
+    max-width: 99%;
+}
+
+.parent-element {
+    overflow-x: hidden;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.col.product {
+    transition: transform 0.3s;
+    will-change: transform;
+}
+
+.col.product:hover {
+    transform: scale(1.07);
+}

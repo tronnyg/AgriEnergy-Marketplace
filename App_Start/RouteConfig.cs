@@ -14,9 +14,21 @@ namespace AgriEnergy_WebApp
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "FarmerStore",
+                url: "shop",
+                defaults: new { controller = "Farmer", action = "Shop" }
+            );
+
+            routes.MapRoute(
+                name: "Home",
+                url: "home",
+                defaults: new { controller = "Farmer", action = "Dashboard" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional }
             );
         }
     }

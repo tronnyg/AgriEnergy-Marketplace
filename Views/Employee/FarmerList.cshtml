@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "FarmerList";
+}
+
+@model List<AgriEnergy_WebApp.Models.Farmer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers List</title>
+    <link rel="stylesheet" href="~/Styles/Components/table.css">
+</head>
+<body>
+    <div class="table-container">
+        <table class="responsive-table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Email</th>
+                    <th>Farm Name</th>
+                    <th>Farm Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var farmer in Model)
+                {
+
+                    <tr>
+                        <td>@farmer.User.Username </td>
+                        <td>@farmer.User.Name </td>
+                        <td>@farmer.User.Surname </td>
+                        <td>@farmer.User.Email </td>
+                        <td>@farmer.FarmName </td>
+                        <td>@farmer.FarmLocation </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+

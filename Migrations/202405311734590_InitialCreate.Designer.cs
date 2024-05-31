@@ -13,7 +13,7 @@ namespace AgriEnergy_WebApp.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202405261846359_InitialCreate"; }
+            get { return "202405311734590_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

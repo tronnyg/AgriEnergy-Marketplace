@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "AddProduct";
+}
+@model AgriEnergy_WebApp.Models.Product
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Styles/Components/input-form.css">
+    <title>Add New Farmer</title>
+</head>
+<body>
+    <div class="form-container">
+        <div class="responsive-form">
+            <h2>ADD A PRODUCT</h2>
+            @using (Html.BeginForm("AddProduct", "Farmer", FormMethod.Post))
+            {
+
+                <div class="form-group">
+                    <input type="text" id="name" name="Name" placeholder="Product Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" step="0.01" id="price" name="Price" placeholder="Price" required>
+                </div>
+
+                <div class="form-group">
+                    <input id="description" name="Description" placeholder="Description">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="category" name="Category" placeholder="Category" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" id="quantity" name="Quantity" placeholder="Quantity" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="date" id="dateAdded" name="DateAdded" value="@DateTime.Now.ToString("yyyy-MM-dd")" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="imageUrl" name="ImageUrl">
+                </div>
+
+                <button type="submit">Submit</button>
+            }
+        </div>
+    </div>
+</body>
+</html>
+
+

@@ -9,8 +9,11 @@ namespace AgriEnergy_WebApp.Models
 {
     public class Employee
     {
-        [Key, ForeignKey("User")]
+        [ForeignKey("User")]
         public int UserId { get; set; }
+
+        [Key]
+        public int EmployeeId { get; set; }
 
         [StringLength(255)]
         public string Department { get; set; }

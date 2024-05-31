@@ -1,0 +1,47 @@
+﻿@{   
+    var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+    var actionName = ViewContext.RouteData.Values["action"].ToString();
+ }
+<nav>
+    <div class="label">
+        <label>
+            AGRI-ENERGY CONNECT
+        </label>
+    </div>
+    <ul>
+        <li><a href="@Url.Action("Shop", "Farmer")">My Store</a></li>
+        @if (actionName == "Shop")
+        {
+            <li><a class="custom-link" href="@Url.Action("AddProduct", "Farmer")">Add Product</a></li>
+        }
+
+    </ul>
+    <img class="user-pic" src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/corporate-user-icon.png" onclick="toggleMenu()" />
+
+     <div class="sub-menu-wrap" id="subMenu">
+         <div>
+             <ul class="dropdown-menu position-static d-grid gap-0 p-2 rounded-3 mx-0 shadow w-100" data-bs-theme="light">
+                 <li>
+                     <div class="user-info">
+                         <img src="@AgriEnergy_WebApp.Utilities.UserHelper.GetCurrentUser().UserProfilePicture" />
+                         <h2>@AgriEnergy_WebApp.Utilities.UserHelper.GetCurrentUser().Name @AgriEnergy_WebApp.Utilities.UserHelper.GetCurrentUser().Surname</h2>
+                         <hr />
+                     </div>
+                 </li>
+                 <li><a class="dropdown-item rounded-2 menu-item" href="#">Profile</a></li>
+                 <li><a class="dropdown-item rounded-2 menu-item" href="#">Settings</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                 <li><a class="dropdown-item rounded-2 menu-item" href="@Url.Action("Logout", "Account")">Logout</a></li>
+             </ul>
+         </div>
+        </div>
+
+</nav>
+
+<script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu() {
+        subMenu.classList.toggle("open-menu");
+    }
+</script>

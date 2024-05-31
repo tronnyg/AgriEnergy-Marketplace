@@ -8,8 +8,16 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body class="page-body">
-    <div id="navbar-container"">
-        @Html.Partial("_Navbar")
+    <div id="navbar-container" ">
+        @if (AgriEnergy_WebApp.Utilities.UserHelper.GetCurrentUser().Role.ToUpper() == "FARMER")
+        {
+            @Html.Partial("_NavbarFarmer")
+        }
+        else
+        {
+            @Html.Partial("_NavbarEmployee")
+        }
+
     </div>
     <div>
         @RenderBody()

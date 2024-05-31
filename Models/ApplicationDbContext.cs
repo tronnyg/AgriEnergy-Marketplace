@@ -13,5 +13,6 @@ namespace AgriEnergy_WebApp.Models
         public DbSet<User> Users { get; set; }
         public DbSet<Farmer> Farmers { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Product> products { get; set; }    
     }
 }

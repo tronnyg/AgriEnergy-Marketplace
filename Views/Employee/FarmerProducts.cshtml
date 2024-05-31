@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "FarmerProducts";
+}
+@model List<AgriEnergy_WebApp.Models.Product>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Products</title>
+    <link rel="stylesheet" href="~/Styles/Components/table.css">
+</head>
+<body>
+    <div class="filter-container" style="margin-left: 5%; display: flex; gap: 20px; align-items: flex-start;">
+        <form method="get" action="@Url.Action("FarmerProducts", "Employee")" id="filterForm" style="display: flex; gap: 20px;">
+            <div class="form-group" style="flex: 1;">
+                <label for="startDate" style="display: block; margin-bottom: 5px;">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" value="@Request.QueryString["startDate"]" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; width: 100%; box-sizing: border-box; transition: border-color 0.3s, box-shadow 0.3s;">
+            </div>
+            <div class="form-group" style="flex: 1;">
+                <label for="endDate" style="display: block; margin-bottom: 5px;">End Date:</label>
+                <input type="date" id="endDate" name="endDate" value="@Request.QueryString["endDate"]" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; width: 100%; box-sizing: border-box; transition: border-color 0.3s, box-shadow 0.3s;">
+            </div>
+        </form>
+    </div>
+    <div class="table-container">
+        <table class="responsive-table">
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Farmer</th>
+                    <th>FarmerID</th>
+                    <th>Date Added</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+
+                    <tr>
+                        <td>@product.ProductId</td>
+                        <td>@product.Name</td>
+                        <td>@product.Price</td>
+                        <td>@product.Farmer.User.Name @product.Farmer.User.Surname</td>
+                        <td>@product.Farmer.FarmerId</td>
+                        <td>@product.DateAdded</td>
+                        <td>@product.Category</td>
+                        <td>@product.Quantity</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var startDateInput = document.getElementById("startDate");
+            var endDateInput = document.getElementById("endDate");
+
+            function checkAndSubmitForm() {
+                if (startDateInput.value && endDateInput.value) {
+                    document.getElementById("filterForm").submit();
+                }
+            }
+
+            startDateInput.addEventListener("change", checkAndSubmitForm);
+            endDateInput.addEventListener("change", checkAndSubmitForm);
+        });
+    </script>
+</body>
+</html>
+
